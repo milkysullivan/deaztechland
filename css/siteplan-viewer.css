@@ -1,0 +1,33 @@
+/* ===== Siteplan Viewer Styles (scoped with pdfx-) ===== */
+:root { --pdfx-bg:#0f172a; --pdfx-panel:#111827; --pdfx-text:#e5e7eb; --pdfx-accent:#22d3ee; }
+
+.pdfx-wrap { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--pdfx-text); background: var(--pdfx-bg); min-height: 100vh; }
+
+.pdfx-toolbar { position: sticky; top: 0; z-index: 10; display: flex; gap: .5rem; align-items: center; padding: .5rem .75rem; background: linear-gradient(180deg, rgba(17,24,39,.9), rgba(17,24,39,.7)); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(255,255,255,.08); }
+
+.pdfx-btn { appearance: none; border: 1px solid rgba(255,255,255,.12); background: #0b1220; color: var(--pdfx-text); padding: .4rem .6rem; border-radius: .5rem; cursor: pointer; font-size: .9rem; line-height: 1; }
+.pdfx-btn:hover { border-color: var(--pdfx-accent); }
+.pdfx-btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+.pdfx-sep { width:1px; height: 28px; background: rgba(255,255,255,.12); margin: 0 .25rem; }
+
+.pdfx-zoom { min-width: 4.5rem; text-align: center; font-variant-numeric: tabular-nums; }
+
+.pdfx-pagebox { display: flex; align-items: center; gap: .35rem; }
+.pdfx-input { width: 4.5rem; background:#0b1220; border:1px solid rgba(255,255,255,.12); color:var(--pdfx-text); padding:.35rem .45rem; border-radius:.4rem; }
+
+.pdfx-stage { background: var(--pdfx-bg); min-height: 50vh; display:flex; justify-content:center; align-items:flex-start; padding: 1rem; overflow:auto; }
+.pdfx-canvaswrap { position: relative; background: #0b1220; border: 1px solid rgba(255,255,255,.08); border-radius: .75rem; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.pdfx-canvaswrap::before { content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.03); }
+
+.pdfx-canvas { display:block; border-radius: .75rem; }
+
+.pdfx-footer { color:#94a3b8; font-size:.85rem; text-align:center; padding:.5rem 0 1rem; }
+
+.pdfx-link { color: var(--pdfx-accent); }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .pdfx-zoom { display:none; }
+  .pdfx-input { width:3.5rem; }
+}
