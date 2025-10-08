@@ -1874,6 +1874,23 @@ figure figcaption {
         font-weight: bold; }
       .featured-property-half .text ul li {
         margin-bottom: 10px; }
+
+        /* ==== Responsive: di bawah 500px jadi bertumpuk ==== */
+@media (max-width: 500px) {
+  .featured-property-half {
+    flex-direction: column;     /* <— jadi ke bawah */
+    margin-top: 20px;              /* optional: hilangkan margin minus biar rapi */
+  }
+  .featured-property-half > div {
+    width: 100%;                /* full width */
+  }
+  .featured-property-half .text {
+    padding: 24px;              /* kecilkan padding di mobile */
+  }
+  .featured-property-half .image {
+    min-height: 220px;          /* tinggi gambar di mobile */
+  }
+}
 /* css/siteplan-viewer.css (boleh gabung ke style.css juga) */
 .pdfnative-wrap {
   background: #0f172a;
